@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DVideo from '../abis/DVideo.json'
+import DVideo from '../abis/DVS_WEB.json'
 import Navbar from './Navbar'
 import Main from './Main'
 import Web3 from 'web3';
@@ -37,19 +37,19 @@ class App extends Component {
     //Get network ID
     //Get network data
     //Check if net data exists, then
-      //Assign dvideo contract to a variable
-      //Add dvideo to the state
+    //Assign dvideo contract to a variable
+    //Add dvideo to the state
 
-      //Check videoAmounts
-      //Add videAmounts to the state
+    //Check videoAmounts
+    //Add videAmounts to the state
 
-      //Iterate throught videos and add them to the state (by newest)
+    //Iterate throught videos and add them to the state (by newest)
 
 
-      //Set latest video and it's title to view as default 
-      //Set loading state to false
+    //Set latest video and it's title to view as default 
+    //Set loading state to false
 
-      //If network data doesn't exisits, log error
+    //If network data doesn't exisits, log error
   }
 
   //Get video
@@ -80,14 +80,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar 
-          //Account
+        <Navbar
+        //Account
         />
-        { this.state.loading
+        {this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
           : <Main
-              //states&functions
-            />
+          //states&functions
+          />
         }
       </div>
     );
