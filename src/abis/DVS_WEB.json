@@ -58,21 +58,21 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_videoHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"}],\"name\":\"uploadVideo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"videoCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol\":\"DVS_WEB\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol\":{\"keccak256\":\"0xd3b59da7f2d41577023106c6d3ae2658aaf38513153fd451d2c7d96bfae53fef\",\"urls\":[\"bzz-raw://8b1ec976fc546f5c5cec5b4c0b18af773396d8b1f2e936de223e2b8ff5633e99\",\"dweb:/ipfs/QmTUbPQQ1cNHXd5VokFUho4unCdehuJwaYEpCf8XGJZN1z\"]}},\"version\":1}",
-  "bytecode": "0x6080604052600080556040518060400160405280600781526020017f4456535f5745420000000000000000000000000000000000000000000000000081525060019080519060200190610053929190610066565b5034801561006057600080fd5b5061010b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a757805160ff19168380011785556100d5565b828001600101855582156100d5579182015b828111156100d45782518255916020019190600101906100b9565b5b5090506100e291906100e6565b5090565b61010891905b808211156101045760008160009055506001016100ec565b5090565b90565b6103168061011a6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780638a5447c5146100c9578063c61b5f4c1461021b575b600080fd5b61004e610239565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610219600480360360408110156100df57600080fd5b81019080803590602001906401000000008111156100fc57600080fd5b82018360208201111561010e57600080fd5b8035906020019184600183028401116401000000008311171561013057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561019357600080fd5b8201836020820111156101a557600080fd5b803590602001918460018302840111640100000000831117156101c757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506102d7565b005b6102236102db565b6040518082815260200191505060405180910390f35b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cf5780601f106102a4576101008083540402835291602001916102cf565b820191906000526020600020905b8154815290600101906020018083116102b257829003601f168201915b505050505081565b5050565b6000548156fea265627a7a723158208b94688f791a2e43afbd042296fc0dc90b73cecbcc70fbd7660384b675c7898964736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780638a5447c5146100c9578063c61b5f4c1461021b575b600080fd5b61004e610239565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610219600480360360408110156100df57600080fd5b81019080803590602001906401000000008111156100fc57600080fd5b82018360208201111561010e57600080fd5b8035906020019184600183028401116401000000008311171561013057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561019357600080fd5b8201836020820111156101a557600080fd5b803590602001918460018302840111640100000000831117156101c757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506102d7565b005b6102236102db565b6040518082815260200191505060405180910390f35b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cf5780601f106102a4576101008083540402835291602001916102cf565b820191906000526020600020905b8154815290600101906020018083116102b257829003601f168201915b505050505081565b5050565b6000548156fea265627a7a723158208b94688f791a2e43afbd042296fc0dc90b73cecbcc70fbd7660384b675c7898964736f6c63430005100032",
-  "sourceMap": "27:503:0:-;;;74:1;49:26;;80:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;193:27;8:9:-1;5:2;;;30:1;27;20:12;5:2;193:27:0;27:503;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "27:503:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:503:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;80:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;80:30:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;226:301;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;226:301:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;226:301:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;226:301:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;226:301:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;226:301:0;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;226:301:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;226:301:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;226:301:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;226:301:0;;;;;;;;;;;;;;;:::i;:::-;;49:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;80:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;226:301::-;;;:::o;49:26::-;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract DVS_WEB {\r\n  uint public videoCount = 0;\r\n  string public name = \"DVS_WEB\";\r\n  //Create id=>struct mapping\r\n\r\n  //Create Struct\r\n\r\n\r\n  //Create Event\r\n\r\n\r\n  constructor() public {\r\n  }\r\n\r\n  function uploadVideo(string memory _videoHash, string memory _title) public {\r\n    // Make sure the video hash exists\r\n\r\n    // Make sure video title exists\r\n\r\n    // Make sure uploader address exists\r\n\r\n\r\n    // Increment video id\r\n\r\n    // Add video to the contract\r\n\r\n    // Trigger an event\r\n\r\n  }\r\n}\r\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_videoHash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"}],\"name\":\"uploadVideo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"videoCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol\":\"DVS_WEB\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol\":{\"keccak256\":\"0xa32882d78d6bb5287c1dc8d95bf58f8b479881b74499276e4bc5a51126fd8800\",\"urls\":[\"bzz-raw://be5e7631352841ce4997dc52900969da5cddc6866bc98b4a21caa3a093d0c004\",\"dweb:/ipfs/QmXND4WADQdC62U1jnx1xySKQRDcc3JjAGEcak2KngwAGx\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600080556040518060400160405280600781526020017f4456535f5745420000000000000000000000000000000000000000000000000081525060019080519060200190610053929190610066565b5034801561006057600080fd5b5061010b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a757805160ff19168380011785556100d5565b828001600101855582156100d5579182015b828111156100d45782518255916020019190600101906100b9565b5b5090506100e291906100e6565b5090565b61010891905b808211156101045760008160009055506001016100ec565b5090565b90565b6103168061011a6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780638a5447c5146100c9578063c61b5f4c1461021b575b600080fd5b61004e610239565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610219600480360360408110156100df57600080fd5b81019080803590602001906401000000008111156100fc57600080fd5b82018360208201111561010e57600080fd5b8035906020019184600183028401116401000000008311171561013057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561019357600080fd5b8201836020820111156101a557600080fd5b803590602001918460018302840111640100000000831117156101c757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506102d7565b005b6102236102db565b6040518082815260200191505060405180910390f35b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cf5780601f106102a4576101008083540402835291602001916102cf565b820191906000526020600020905b8154815290600101906020018083116102b257829003601f168201915b505050505081565b5050565b6000548156fea265627a7a723158201d8051e27335a8f8e2f892ae3061e693244b44779c83637788d701a7486498b564736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780638a5447c5146100c9578063c61b5f4c1461021b575b600080fd5b61004e610239565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610219600480360360408110156100df57600080fd5b81019080803590602001906401000000008111156100fc57600080fd5b82018360208201111561010e57600080fd5b8035906020019184600183028401116401000000008311171561013057600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561019357600080fd5b8201836020820111156101a557600080fd5b803590602001918460018302840111640100000000831117156101c757600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506102d7565b005b6102236102db565b6040518082815260200191505060405180910390f35b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cf5780601f106102a4576101008083540402835291602001916102cf565b820191906000526020600020905b8154815290600101906020018083116102b257829003601f168201915b505050505081565b5050565b6000548156fea265627a7a723158201d8051e27335a8f8e2f892ae3061e693244b44779c83637788d701a7486498b564736f6c63430005100032",
+  "sourceMap": "101:583:0:-;;;148:1;123:26;;154:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;347:27;8:9:-1;5:2;;;30:1;27;20:12;5:2;347:27:0;101:583;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "101:583:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;101:583:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;154:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;154:30:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;380:301;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;380:301:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;380:301:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;380:301:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;380:301:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;380:301:0;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;380:301:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;380:301:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;380:301:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;380:301:0;;;;;;;;;;;;;;;:::i;:::-;;123:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;154:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;380:301::-;;;:::o;123:26::-;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n//Model the video\r\n//Store the Video\r\n//Upload the Video\r\n//List the Video\r\ncontract DVS_WEB {\r\n  uint public videoCount = 0;\r\n  string public name = \"DVS_WEB\";\r\n  //Create id=>struct mapping\r\n\r\n  //Create Struct\r\nstruct Video{\r\n  uint id;\r\n  string hash;\r\n  string title;\r\n  address author;\r\n}\r\n\r\n  //Create Event\r\n\r\n\r\n  constructor() public {\r\n  }\r\n\r\n  function uploadVideo(string memory _videoHash, string memory _title) public {\r\n    // Make sure the video hash exists\r\n\r\n    // Make sure video title exists\r\n\r\n    // Make sure uploader address exists\r\n\r\n\r\n    // Increment video id\r\n\r\n    // Add video to the contract\r\n\r\n    // Trigger an event\r\n\r\n  }\r\n}\r\n",
   "sourcePath": "C:/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol",
   "ast": {
     "absolutePath": "/C/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol",
     "exportedSymbols": {
       "DVS_WEB": [
-        20
+        29
       ]
     },
-    "id": 21,
+    "id": 30,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -92,9 +92,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 20,
+        "id": 29,
         "linearizedBaseContracts": [
-          20
+          29
         ],
         "name": "DVS_WEB",
         "nodeType": "ContractDefinition",
@@ -104,8 +104,8 @@
             "id": 4,
             "name": "videoCount",
             "nodeType": "VariableDeclaration",
-            "scope": 20,
-            "src": "49:26:0",
+            "scope": 29,
+            "src": "123:26:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -116,7 +116,7 @@
               "id": 2,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "49:4:0",
+              "src": "123:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -132,7 +132,7 @@
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "74:1:0",
+              "src": "148:1:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_0_by_1",
@@ -147,8 +147,8 @@
             "id": 7,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 20,
-            "src": "80:30:0",
+            "scope": 29,
+            "src": "154:30:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -159,7 +159,7 @@
               "id": 5,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "80:6:0",
+              "src": "154:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -175,7 +175,7 @@
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "101:9:0",
+              "src": "175:9:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_a20f63edb06cffc25dfe7fa25586ddaba72cfb0feeb98bdd3d2004afbd63664f",
@@ -186,62 +186,178 @@
             "visibility": "public"
           },
           {
+            "canonicalName": "DVS_WEB.Video",
+            "id": 16,
+            "members": [
+              {
+                "constant": false,
+                "id": 9,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "256:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "256:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "name": "hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "268:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "268:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "name": "title",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "284:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 12,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "284:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 15,
+                "name": "author",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "301:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 14,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Video",
+            "nodeType": "StructDefinition",
+            "scope": 29,
+            "src": "239:80:0",
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 10,
+              "id": 19,
               "nodeType": "Block",
-              "src": "214:6:0",
+              "src": "368:6:0",
               "statements": []
             },
             "documentation": null,
-            "id": 11,
+            "id": 20,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8,
+              "id": 17,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "204:2:0"
+              "src": "358:2:0"
             },
             "returnParameters": {
-              "id": 9,
+              "id": 18,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "214:0:0"
+              "src": "368:0:0"
             },
-            "scope": 20,
-            "src": "193:27:0",
+            "scope": 29,
+            "src": "347:27:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 18,
+              "id": 27,
               "nodeType": "Block",
-              "src": "302:225:0",
+              "src": "456:225:0",
               "statements": []
             },
             "documentation": null,
-            "id": 19,
+            "id": 28,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "uploadVideo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 16,
+              "id": 25,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 13,
+                  "id": 22,
                   "name": "_videoHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19,
-                  "src": "247:24:0",
+                  "scope": 28,
+                  "src": "401:24:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -249,10 +365,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 12,
+                    "id": 21,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "247:6:0",
+                    "src": "401:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -263,11 +379,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 15,
+                  "id": 24,
                   "name": "_title",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19,
-                  "src": "273:20:0",
+                  "scope": 28,
+                  "src": "427:20:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -275,10 +391,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 14,
+                    "id": 23,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "273:6:0",
+                    "src": "427:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -288,35 +404,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "246:48:0"
+              "src": "400:48:0"
             },
             "returnParameters": {
-              "id": 17,
+              "id": 26,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "302:0:0"
+              "src": "456:0:0"
             },
-            "scope": 20,
-            "src": "226:301:0",
+            "scope": 29,
+            "src": "380:301:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 21,
-        "src": "27:503:0"
+        "scope": 30,
+        "src": "101:583:0"
       }
     ],
-    "src": "0:532:0"
+    "src": "0:686:0"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/SHIVAKANCHI/Desktop/Projects/DVS_WEB/src/contracts/DVS_WEB.sol",
     "exportedSymbols": {
       "DVS_WEB": [
-        20
+        29
       ]
     },
-    "id": 21,
+    "id": 30,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -336,9 +452,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 20,
+        "id": 29,
         "linearizedBaseContracts": [
-          20
+          29
         ],
         "name": "DVS_WEB",
         "nodeType": "ContractDefinition",
@@ -348,8 +464,8 @@
             "id": 4,
             "name": "videoCount",
             "nodeType": "VariableDeclaration",
-            "scope": 20,
-            "src": "49:26:0",
+            "scope": 29,
+            "src": "123:26:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -360,7 +476,7 @@
               "id": 2,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "49:4:0",
+              "src": "123:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -376,7 +492,7 @@
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "74:1:0",
+              "src": "148:1:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_0_by_1",
@@ -391,8 +507,8 @@
             "id": 7,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 20,
-            "src": "80:30:0",
+            "scope": 29,
+            "src": "154:30:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -403,7 +519,7 @@
               "id": 5,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "80:6:0",
+              "src": "154:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -419,7 +535,7 @@
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "101:9:0",
+              "src": "175:9:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_a20f63edb06cffc25dfe7fa25586ddaba72cfb0feeb98bdd3d2004afbd63664f",
@@ -430,62 +546,178 @@
             "visibility": "public"
           },
           {
+            "canonicalName": "DVS_WEB.Video",
+            "id": 16,
+            "members": [
+              {
+                "constant": false,
+                "id": 9,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "256:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "256:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "name": "hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "268:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "268:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "name": "title",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "284:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 12,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "284:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 15,
+                "name": "author",
+                "nodeType": "VariableDeclaration",
+                "scope": 16,
+                "src": "301:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 14,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Video",
+            "nodeType": "StructDefinition",
+            "scope": 29,
+            "src": "239:80:0",
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 10,
+              "id": 19,
               "nodeType": "Block",
-              "src": "214:6:0",
+              "src": "368:6:0",
               "statements": []
             },
             "documentation": null,
-            "id": 11,
+            "id": 20,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 8,
+              "id": 17,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "204:2:0"
+              "src": "358:2:0"
             },
             "returnParameters": {
-              "id": 9,
+              "id": 18,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "214:0:0"
+              "src": "368:0:0"
             },
-            "scope": 20,
-            "src": "193:27:0",
+            "scope": 29,
+            "src": "347:27:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 18,
+              "id": 27,
               "nodeType": "Block",
-              "src": "302:225:0",
+              "src": "456:225:0",
               "statements": []
             },
             "documentation": null,
-            "id": 19,
+            "id": 28,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "uploadVideo",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 16,
+              "id": 25,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 13,
+                  "id": 22,
                   "name": "_videoHash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19,
-                  "src": "247:24:0",
+                  "scope": 28,
+                  "src": "401:24:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -493,10 +725,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 12,
+                    "id": 21,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "247:6:0",
+                    "src": "401:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -507,11 +739,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 15,
+                  "id": 24,
                   "name": "_title",
                   "nodeType": "VariableDeclaration",
-                  "scope": 19,
-                  "src": "273:20:0",
+                  "scope": 28,
+                  "src": "427:20:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -519,10 +751,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 14,
+                    "id": 23,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "273:6:0",
+                    "src": "427:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -532,26 +764,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "246:48:0"
+              "src": "400:48:0"
             },
             "returnParameters": {
-              "id": 17,
+              "id": 26,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "302:0:0"
+              "src": "456:0:0"
             },
-            "scope": 20,
-            "src": "226:301:0",
+            "scope": 29,
+            "src": "380:301:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 21,
-        "src": "27:503:0"
+        "scope": 30,
+        "src": "101:583:0"
       }
     ],
-    "src": "0:532:0"
+    "src": "0:686:0"
   },
   "compiler": {
     "name": "solc",
@@ -561,8 +793,8 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xce9A604F96e7Dae3343c60dAF74fD71ed77Bd328",
-      "transactionHash": "0xf85b540cdb7ca85de5f5f72bee0fe7d7ae30941ee12d9b288b7fca54c43d0ac9"
+      "address": "0xCeCdc3ce0B30306C0bf1fa7269Afa50E71c46740",
+      "transactionHash": "0xcb35987337794ec56f7e92d97be54acac8499e67786e6d479f7d0cf73e387c1f"
     },
     "1603382557524": {
       "events": {
@@ -756,7 +988,7 @@
     }
   },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2023-03-06T17:48:53.307Z",
+  "updatedAt": "2023-03-06T20:57:54.984Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

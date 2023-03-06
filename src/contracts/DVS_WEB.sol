@@ -1,40 +1,39 @@
 pragma solidity ^0.5.0;
-//Model the video
-//Store the Video
-//Upload the Video
-//List the Video
+
+// 2.Store the Video
+// 3.Upload the Video
+// 4.List the Video
 contract DVS_WEB {
-  uint public videoCount = 0;
-  string public name = "DVS_WEB";
-  //Create id=>struct mapping
+    uint public videoCount = 0;
+    string public name = "DVS_WEB";
+    //Create id=>struct mapping
+    mapping(uint => Video) public Videos;
 
-  //Create Struct
-struct Video{
-  uint id;
-  string hash;
-  string title;
-  address author;
-}
+    // 1.Model the video
+    //Create Struct(Customized Data Types)
+    struct Video {
+        uint id; //unique identifier
+        string hash; //ipfs hash
+        string title; //video title
+        address author; //address of uploader
+    }
 
-  //Create Event
+    //Create Event
 
+    constructor() public {}
 
-  constructor() public {
-  }
-
-  function uploadVideo(string memory _videoHash, string memory _title) public {
-    // Make sure the video hash exists
-
-    // Make sure video title exists
-
-    // Make sure uploader address exists
-
-
-    // Increment video id
-
-    // Add video to the contract
-
-    // Trigger an event
-
-  }
+    function uploadVideo(
+        string memory _videoHash,
+        string memory _title
+    ) public {
+        // Make sure the video hash exists
+        // Make sure video title exists
+        // Make sure uploader address exists
+        // Increment video id
+        videoCount++;
+        // Add video to the contract
+        //msg is a global variable in solidity
+        Videos[videoCount] = Video(videoCount, _videoHash, _title, msg.sender);
+        // Trigger an event
+    }
 }
