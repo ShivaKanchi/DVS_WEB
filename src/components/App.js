@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DVideo from '../abis/DVS_WEB.json'
+import DVS_WEB from '../abis/DVS_WEB.json'
 import Navbar from './Navbar'
 import Main from './Main'
 import Web3 from 'web3';
@@ -33,24 +33,59 @@ class App extends Component {
   async loadBlockchainData() {
     const web3 = window.web3
     //Load accounts
+    const accounts = await web3.eth.getAccounts()//returns all acounts in metmask
+    console.log(accounts)
+
     //Add first account the the state
+    this.setState({ account: accounts[0] })
 
     //Get network ID
+    const networkId = await web3.eth.net.getId()
+
     //Get network data
+    const networkData = DVS_WEB.networks[networkId]
+
     //Check if net data exists, then
-    //Assign dvideo contract to a variable
-    //Add dvideo to the state
+    if (networkData) {
 
-    //Check videoAmounts
-    //Add videAmounts to the state
+      //Assign DVS_WEB contract to a variable 
+      const dvs_video = new web3.eth.Contract(DVS_WEB.abi, DVS_WEB.networks[networkId].address)
+      console.log("->", dvs_video)
 
-    //Iterate throught videos and add them to the state (by newest)
+      //Add DVS_WEB to the state
+      this.setState({ dvs_video })
 
+      //Check videoAmounts
 
-    //Set latest video and it's title to view as default 
-    //Set loading state to false
+      const videosCount = await dvs_video.methods.videoCount().call()
 
+      //Add videoAmounts to the state
+      this.setState({ videosCount })
+
+      //Load Videos
+      //Iterate throught videos and add them to the state (sort by newest)
+      for (var i = videosCount; i >= 1; i--) {
+        const video = await dvs_video.methods.videos(i).call()
+        this.setState({
+          videos: [...this.state.videos, video]
+        })
+      }
+
+      //Set latest video and it's title to view as default 
+      const latest = await dvs_video.methods.videos(videosCount).call()
+
+      //Set loading state to false
+      this.state({
+        currentHash: latest.hash,
+        currentTitle: latest.title
+      })
+      this.setState({ loading: false })
+
+    }
     //If network data doesn't exisits, log error
+    else {
+      window.alert('DVS contract not deployed to detected network')
+    }
   }
 
   //Get video
@@ -71,8 +106,9 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: false
-      //set states
+      loading: false,
+      //set states     
+      account: ''
     }
 
     //Bind functions
@@ -82,7 +118,8 @@ class App extends Component {
     return (
       <div>
         <Navbar
-        //Account
+          //Account
+          account={this.state.account}
         />
         {this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
