@@ -34,7 +34,7 @@ class App extends Component {
     const web3 = window.web3
     //Load accounts
     const accounts = await web3.eth.getAccounts()//returns all acounts in metmask
-    console.log(accounts)
+    // console.log(accounts)
 
     //Add first account the the state
     this.setState({ account: accounts[0] })
@@ -49,14 +49,13 @@ class App extends Component {
     if (networkData) {
 
       //Assign DVS_WEB contract to a variable 
-      const dvs_video = new web3.eth.Contract(DVS_WEB.abi, DVS_WEB.networks[networkId].address)
-      console.log("->", dvs_video)
+      const dvs_video = new web3.eth.Contract(DVS_WEB.abi, networkData.address)
+      // console.log("->", dvs_video)
 
       //Add DVS_WEB to the state
       this.setState({ dvs_video })
 
       //Check videoAmounts
-
       const videosCount = await dvs_video.methods.videoCount().call()
 
       //Add videoAmounts to the state
@@ -82,10 +81,12 @@ class App extends Component {
       this.setState({ loading: false })
 
     }
+
     //If network data doesn't exisits, log error
     else {
       window.alert('DVS contract not deployed to detected network')
     }
+
   }
 
   //Get video
