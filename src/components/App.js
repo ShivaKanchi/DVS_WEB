@@ -49,14 +49,14 @@ class App extends Component {
     if (networkData) {
 
       //Assign DVS_WEB contract to a variable 
-      const dvs_video = new web3.eth.Contract(DVS_WEB.abi, networkData.address)
-      // console.log("->", dvs_video)
+      const dvs_web = new web3.eth.Contract(DVS_WEB.abi, networkData.address)
+      // console.log("->", dvs_web)
 
       //Add DVS_WEB to the state
-      this.setState({ dvs_video })
+      this.setState({ dvs_web })
 
       //Check videoAmounts
-      const videosCount = await dvs_video.methods.videoCount().call()
+      const videosCount = await dvs_web.methods.videoCount().call()
 
       //Add videoAmounts to the state
       this.setState({ videosCount })
@@ -64,17 +64,17 @@ class App extends Component {
       //Load Videos
       //Iterate throught videos and add them to the state (sort by newest)
       for (var i = videosCount; i >= 1; i--) {
-        const video = await dvs_video.methods.videos(i).call()
+        const video = await dvs_web.methods.Videos(i).call()
         this.setState({
           videos: [...this.state.videos, video]
         })
       }
 
       //Set latest video and it's title to view as default 
-      const latest = await dvs_video.methods.videos(videosCount).call()
+      const latest = await dvs_web.methods.Videos(videosCount).call()
 
       //Set loading state to false
-      this.state({
+      this.setState({
         currentHash: latest.hash,
         currentTitle: latest.title
       })
@@ -115,7 +115,7 @@ class App extends Component {
 
       //Putting on Blockchain through smart Contract
       this.setState({ loading: true })
-      this.state.dvs_video.methods.uploadVideo(result[0].hash, title)
+      this.state.dvs_web.methods.uploadVideo(result[0].hash, title)
         .send({ from: this.state.account })
         .on('transactionHash', (hash) => {
           this.setState({ loading: false })
@@ -125,7 +125,8 @@ class App extends Component {
 
   //Change Video
   changeVideo = (hash, title) => {
-
+    this.setState({ 'currentHash': hash })
+    this.setState({ 'currentTitle': title })
   }
 
   constructor(props) {
@@ -150,8 +151,12 @@ class App extends Component {
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
           : <Main
             //states&functions
+            videos={this.state.videos}
+            changeVideo={this.changeVideo}
             captureFile={this.captureFile}
             uploadVideo={this.uploadVideo}
+            currentHash={this.state.currentHash}
+            currentTitle={this.state.currentTitle}
           />
         }
       </div>
