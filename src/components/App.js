@@ -91,12 +91,36 @@ class App extends Component {
 
   //Get video
   captureFile = event => {
+    event.preventDefault()
+    const file = event.target.files[0]
+    const reader = new window.FileReader()
+    reader.readAsArrayBuffer(file)
 
+    reader.onloadend = () => {
+      this.setState({ buffer: Buffer(reader.result) })
+      console.log('Buffer', this.state.buffer)
+    }
   }
 
   //Upload video
   uploadVideo = title => {
+    console.log("Submitting file to IPFS...")
+    //Adding to IPFS
+    ipfs.add(this.state.buffer, (error, result) => {
+      console.log('IPFS result', result)
+      if (error) {
+        console.error(error)
+        return
+      }
 
+      //Putting on Blockchain through smart Contract
+      this.setState({ loading: true })
+      this.state.dvs_video.methods.uploadVideo(result[0].hash, title)
+        .send({ from: this.state.account })
+        .on('transactionHash', (hash) => {
+          this.setState({ loading: false })
+        })
+    })
   }
 
   //Change Video
@@ -125,7 +149,9 @@ class App extends Component {
         {this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
           : <Main
-          //states&functions
+            //states&functions
+            captureFile={this.captureFile}
+            uploadVideo={this.uploadVideo}
           />
         }
       </div>
