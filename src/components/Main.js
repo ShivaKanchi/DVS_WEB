@@ -23,7 +23,7 @@ class Main extends Component {
           <div className="col-md-2 overflow-auto text-center" style={{ maxHeight: '768px', minWidth: '175px' }}>
             <h5><b>Share Video</b></h5>
             <form onSubmit={(event) => {
-              {/* Upload Video */ }
+              // {/* Upload Video */ }
               event.preventDefault()
               const title = this.videoTitle.value
               this.props.uploadVideo(title)
@@ -48,7 +48,7 @@ class Main extends Component {
             </form>
             {/* Map Video */}
             {this.props.videos?.map((video, key) => {
-              {/* Return Video */ }
+              // {/* Return Video */ }
               return (
                 <div id={key} className='card mb-4 text-center bg-secondary mx-auto' style={{ width: '175px' }}>
                   <div className="card-title bg-dark">
