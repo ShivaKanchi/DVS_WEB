@@ -4,7 +4,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="container-fluid text-monospace">
+      <div className="container-fluid text-monospace bg-dark">
         <br></br>
         &nbsp;
         <br></br>
@@ -12,10 +12,11 @@ class Main extends Component {
           <div className="col-md-10">
             <div className="embed-responsive embed-responsive-16by9" style={{ maxHeight: '768px' }}>
               {/* Video */}
-              <video
+              {this.props.currentHash ? (<video
                 src={`https://ipfs.infura.io/ipfs/${this.props.currentHash}`}
                 controls
-              ></video>
+              />) : <>
+              </>}
             </div>
             {/* Titile */}
             <h3><b><i>{this.props.currentTitle}</i></b></h3>

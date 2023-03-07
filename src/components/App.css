@@ -1,1 +1,18 @@
 /* Styles go here */
+.logotext {
+    font-size: 3rem;
+    font-family: 'Tilt Prism', cursive;
+    color: aliceblue;
+}
+
+.logobox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sitedesc {
+    font-family: 'Golos Text',
+        sans-serif;
+}
