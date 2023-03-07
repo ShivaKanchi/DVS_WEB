@@ -32,35 +32,34 @@ class Main extends Component {
             }
           </div>
 
-          <div className="col-md-2 overflow-auto text-center" style={{ maxHeight: '768px', minWidth: '150px' }}>
-            <h5 className='formtitle m-2'><b>Share Video</b></h5>
-
-
+          <div className="col-md-2 overflow-auto border-left text-center" style={{ maxHeight: '768px', minWidth: '150px' }}>
+            <h5 className='formtitle m-2'><b>Post Video</b></h5>
             <form onSubmit={(event) => {
               // {/* Upload Video */ }
               event.preventDefault()
               const title = this.videoTitle.value
               this.props.uploadVideo(title)
             }} >
-              &nbsp;
               <div className='formbody'>
-
                 {/* Get Video */}
-                <div className="form-group mr-sm-2">
+                <div className="form-group">
+
                   <input
                     type='file'
-                    className='videoinput'
+                    id='videoinput'
+                    className='form-control form-control-sm'
                     accept='.mp4, .mkv .ogg, .wmv'
                     onChange={this.props.captureFile}
-                    style={{ width: '130px' }}
+                    required
                   />
+
                 </div>
-                <div className="form-group mr-sm-2">
+                <div className="form-group">
                   {/* Input */}
                   <input
                     id='videoTitle'
                     type='text'
-                    className='form-control-sm'
+                    className='form-control form-control-sm'
                     placeholder='Title of Video'
                     ref={(input) => { this.videoTitle = input }}
                     required
@@ -96,7 +95,7 @@ class Main extends Component {
               )
             })}
           </div>
-        </div>
+        </div >
       </div >
     );
   }
