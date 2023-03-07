@@ -1,4 +1,5 @@
 /* Styles go here */
+
 .logotext {
     font-size: 3rem;
     font-family: 'Tilt Prism', cursive;
@@ -12,7 +13,18 @@
     align-items: center;
 }
 
-.sitedesc {
-    font-family: 'Golos Text',
-        sans-serif;
+.tagline {
+    color: white;
+    font-family: 'Golos Text', sans-serif;
+}
+
+.formtitle {
+    color: #e3e3e3;
+}
+
+.formbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

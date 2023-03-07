@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import blockgif from '../media/Block.gif'
 
 class Main extends Component {
 
@@ -8,21 +9,33 @@ class Main extends Component {
         <br></br>
         &nbsp;
         <br></br>
-        <div className="row">
+        <br></br>
+        <div className="row" >
+
           <div className="col-md-10">
-            <div className="embed-responsive embed-responsive-16by9" style={{ maxHeight: '768px' }}>
-              {/* Video */}
-              {this.props.currentHash ? (<video
-                src={`https://ipfs.infura.io/ipfs/${this.props.currentHash}`}
-                controls
-              />) : <>
-              </>}
-            </div>
-            {/* Titile */}
-            <h3><b><i>{this.props.currentTitle}</i></b></h3>
+            {this.props.currentHash ? (<>
+              <div className="embed-responsive embed-responsive-16by9" style={{ maxHeight: '768px' }}>
+                {/* Video */}
+                <video
+                  src={`https://ipfs.infura.io/ipfs/${this.props.currentHash}`}
+                  controls
+                />
+              </div>
+              {/* Title */}
+              <h3><b><i>{this.props.currentTitle}</i></b></h3>
+            </>)
+              : (
+                <div className='d-flex justify-content-center align-items-center' style={{ height: '649px' }} >
+                  <img src={blockgif} width='160' height='160' />
+                </div>
+              )
+            }
           </div>
-          <div className="col-md-2 overflow-auto text-center" style={{ maxHeight: '768px', minWidth: '175px' }}>
-            <h5><b>Share Video</b></h5>
+
+          <div className="col-md-2 overflow-auto text-center" style={{ maxHeight: '768px', minWidth: '150px' }}>
+            <h5 className='formtitle m-2'><b>Share Video</b></h5>
+
+
             <form onSubmit={(event) => {
               // {/* Upload Video */ }
               event.preventDefault()
@@ -30,23 +43,37 @@ class Main extends Component {
               this.props.uploadVideo(title)
             }} >
               &nbsp;
-              {/* Get Video */}
-              <input type='file' accept='.mp4, .mkv .ogg, .wmv' onChange={this.props.captureFile} style={{ width: '250px' }} />
-              <div className="form-group mr-sm-2">
-                {/* Input */}
-                <input
-                  id='videoTitle'
-                  type='text'
-                  className='form-control-sm'
-                  placeholder='Title of Video'
-                  ref={(input) => { this.videoTitle = input }}
-                  required
-                />
+              <div className='formbody'>
+
+                {/* Get Video */}
+                <div className="form-group mr-sm-2">
+                  <input
+                    type='file'
+                    className='videoinput'
+                    accept='.mp4, .mkv .ogg, .wmv'
+                    onChange={this.props.captureFile}
+                    style={{ width: '130px' }}
+                  />
+                </div>
+                <div className="form-group mr-sm-2">
+                  {/* Input */}
+                  <input
+                    id='videoTitle'
+                    type='text'
+                    className='form-control-sm'
+                    placeholder='Title of Video'
+                    ref={(input) => { this.videoTitle = input }}
+                    required
+                  />
+                </div>
+                {/* Button */}
+                <button type='submit' className='btn btn-secondary btn-block btn-sm'>Upload</button>
+
               </div>
-              {/* Button */}
-              <button type='submit' className='btn btn-danger btn-block btn-sm'>Upload</button>
               &nbsp;
             </form>
+
+
             {/* Map Video */}
             {this.props.videos?.map((video, key) => {
               // {/* Return Video */ }
@@ -70,7 +97,7 @@ class Main extends Component {
             })}
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }

@@ -147,6 +147,7 @@ class App extends Component {
           //Account
           account={this.state.account}
         />
+
         {this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
           : <Main
@@ -159,6 +160,7 @@ class App extends Component {
             currentTitle={this.state.currentTitle}
           />
         }
+
       </div>
     );
   }
