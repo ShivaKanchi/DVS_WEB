@@ -33,11 +33,16 @@ class Navbar extends Component {
                   src={`data:image/png;base64,${new Identicon(this.props.account, 30).toString()}`}
                   alt="Logo"
                 /> :
-                <span></span>
+                <>
+                </>
             }
           </li>
-        </ul>
 
+          <a className="navbar-brand col-sm-3 col-md-2 mr-0 " href="https://github.com/ShivaKanchi/DVS_WEB" target="_blank" rel="noopener noreferrer" >
+            <i class='fa fa-github'></i>
+          </a>
+
+        </ul>
       </nav>
     );
   }
