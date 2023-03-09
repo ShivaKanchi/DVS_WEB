@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/DVS_WEB/static/css/main.bffd765d.chunk.css",
+    "main.js": "/DVS_WEB/static/js/main.07e4d7d1.chunk.js",
+    "main.js.map": "/DVS_WEB/static/js/main.07e4d7d1.chunk.js.map",
+    "runtime-main.js": "/DVS_WEB/static/js/runtime-main.910fc4e2.js",
+    "runtime-main.js.map": "/DVS_WEB/static/js/runtime-main.910fc4e2.js.map",
+    "static/css/2.80dce9aa.chunk.css": "/DVS_WEB/static/css/2.80dce9aa.chunk.css",
+    "static/js/2.32f21a7b.chunk.js": "/DVS_WEB/static/js/2.32f21a7b.chunk.js",
+    "static/js/2.32f21a7b.chunk.js.map": "/DVS_WEB/static/js/2.32f21a7b.chunk.js.map",
+    "index.html": "/DVS_WEB/index.html",
+    "precache-manifest.2b049bf6db334459685524b0b8dae16c.js": "/DVS_WEB/precache-manifest.2b049bf6db334459685524b0b8dae16c.js",
+    "service-worker.js": "/DVS_WEB/service-worker.js",
+    "static/css/2.80dce9aa.chunk.css.map": "/DVS_WEB/static/css/2.80dce9aa.chunk.css.map",
+    "static/css/main.bffd765d.chunk.css.map": "/DVS_WEB/static/css/main.bffd765d.chunk.css.map",
+    "static/js/2.32f21a7b.chunk.js.LICENSE.txt": "/DVS_WEB/static/js/2.32f21a7b.chunk.js.LICENSE.txt",
+    "static/media/Block.gif": "/DVS_WEB/static/media/Block.67216aed.gif",
+    "static/media/dvs_logo.png": "/DVS_WEB/static/media/dvs_logo.6bceced0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.910fc4e2.js",
+    "static/css/2.80dce9aa.chunk.css",
+    "static/js/2.32f21a7b.chunk.js",
+    "static/css/main.bffd765d.chunk.css",
+    "static/js/main.07e4d7d1.chunk.js"
+  ]
+}
