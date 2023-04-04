@@ -8,12 +8,14 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow text-monospace">
         <div className='logobox'>
+
           <div>
             <a className="navbar-brand col-sm-3 col-md-2 mr-0" href="https://github.com/ShivaKanchi/DVS_WEB" target="_blank" rel="noopener noreferrer" >
               <img src={dvs_web} width="60" height="60" className="d-inline-block align-top" alt="Logo" />
             </a>
           </div>
           <div className='logotext'>DVS</div>
+
         </div>
 
         <ul className="navbar-nav px-3">

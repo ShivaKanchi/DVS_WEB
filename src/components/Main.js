@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import blockgif from '../media/Block.gif'
+import './Main.css';
 
 class Main extends Component {
 
@@ -14,15 +15,15 @@ class Main extends Component {
 
           <div className="col-md-10">
             {this.props.currentHash ? (<>
+              {/* Title */}
+              <h3><b>{this.props.currentTitle}</b></h3>
               <div className="embed-responsive embed-responsive-16by9" style={{ maxHeight: '768px' }}>
                 {/* Video */}
                 <video
-                  src={`https://ipfs.infura.io/ipfs/${this.props.currentHash}`}
+                  src={`https://ipfs.io/ipfs/${this.props.currentHash}`}
                   controls
                 />
               </div>
-              {/* Title */}
-              <h3><b><i>{this.props.currentTitle}</i></b></h3>
             </>)
               : (
                 <div className='d-flex justify-content-center align-items-center' style={{ height: '649px' }} >
@@ -74,10 +75,10 @@ class Main extends Component {
 
 
             {/* Map Video */}
-            {this.props.Videos?.map((video, key) => {
+            {this.props.videos?.map((video, key) => {
               // {/* Return Video */ }
               return (
-                <div id={key} className='card mb-4 text-center bg-secondary mx-auto' style={{ width: '175px' }}>
+                <div id={key} className='card mb-4 text-center bg-secondary mx-auto' style={{ width: '175px', cursor: 'pointer' }}>
                   <div className="card-title bg-dark">
                     <small className="text-white"><b>{video.title}</b></small>
                   </div>
@@ -86,7 +87,7 @@ class Main extends Component {
                     <p onClick={() => this.props.changeVideo(video.hash, video.title)}>
                       {/* Return Side Videos */}
                       <video
-                        src={`https://ipfs.infura.io/ipfs/${video.hash}`}
+                        src={`https://ipfs.io/ipfs/${video.hash}`}
                         style={{ width: '150px' }}
                       />
                     </p>

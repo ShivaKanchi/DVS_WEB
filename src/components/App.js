@@ -41,7 +41,7 @@ class App extends Component {
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
-  };
+  }
 
 
 
@@ -65,13 +65,14 @@ class App extends Component {
 
       //Assign DVS_WEB contract to a variable 
       const dvsweb = new web3.eth.Contract(DVS_WEB.abi, networkData.address)
-      console.log("->", dvsweb)
+      // console.log("->", dvsweb)
 
       //Add DVS_WEB to the state
       this.setState({ dvsweb })
 
       //Check videoAmounts
       const videosCount = await dvsweb.methods.videoCount().call()
+      console.log(videosCount)
 
       //Add videoAmounts to the state
       this.setState({ videosCount })
@@ -132,7 +133,8 @@ class App extends Component {
 
       //Putting on Blockchain through smart Contract
       this.setState({ loading: true })
-      this.state.dvs_web.methods.uploadVideo(result[0].hash, title)
+      // console.log(this.state.dvsweb.methods)
+      this.state.dvsweb.methods.uploadVideo(result[0].hash, title)
         .send({ from: this.state.account })
         .on('transactionHash', (hash) => {
           this.setState({ loading: false })
@@ -149,12 +151,20 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: false,
+      buffer: null,
       //set states     
-      account: ''
+      account: '',
+      dvsweb: null,
+      videos: [],
+      loading: true,
+      currentHash: null,
+      currentTitle: null
     }
 
     //Bind functions
+    this.uploadVideo = this.uploadVideo.bind(this)
+    this.captureFile = this.captureFile.bind(this)
+    this.changeVideo = this.changeVideo.bind(this)
   }
 
   render() {
@@ -165,20 +175,21 @@ class App extends Component {
           account={this.state.account}
         />
 
-        {this.state.loading
-          ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
-          : <Main
-            //states&functions
-            videos={this.state.videos}
-            changeVideo={this.changeVideo}
-            captureFile={this.captureFile}
-            uploadVideo={this.uploadVideo}
-            currentHash={this.state.currentHash}
-            currentTitle={this.state.currentTitle}
-          />
+        {
+          this.state.loading
+            ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
+            : <Main
+              //states&functions
+              videos={this.state.videos}
+              changeVideo={this.changeVideo}
+              captureFile={this.captureFile}
+              uploadVideo={this.uploadVideo}
+              currentHash={this.state.currentHash}
+              currentTitle={this.state.currentTitle}
+            />
         }
 
-      </div>
+      </div >
     );
   }
 }
