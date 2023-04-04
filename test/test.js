@@ -27,7 +27,7 @@ contract('DVS_WEB', ([deployer, author]) => {
     })
   })
   //to check the behaviour of contract
-  describe('Videos', async () => {
+  describe('videos', async () => {
     let result, videoCount
     const hash = 'QmV8cfu6n4NT5xRr2AHdKxFMTZEJrA44qgrBCr739BN9Wb'
 
@@ -37,7 +37,7 @@ contract('DVS_WEB', ([deployer, author]) => {
     })
 
     //check event
-    it('creates Videos', async () => {
+    it('creates videos', async () => {
       // SUCCESS
       assert.equal(videoCount, 1)
       const event = result.logs[0].args
@@ -54,8 +54,8 @@ contract('DVS_WEB', ([deployer, author]) => {
     })
 
     //check from Struct
-    it('lists Videos', async () => {
-      const video = await dvs_web.Videos(videoCount)
+    it('lists videos', async () => {
+      const video = await dvs_web.videos(videoCount)
       assert.equal(video.id.toNumber(), videoCount.toNumber(), 'id is correct')
       assert.equal(video.hash, hash, 'Hash is correct')
       assert.equal(video.title, 'Video title', 'title is correct')

@@ -6,8 +6,21 @@ import Web3 from 'web3';
 import './App.css';
 
 //Declare IPFS
+const projectId = process.env.REACT_APP_PRJ_ID;
+const projectSecret = process.env.REACT_APP_API_KEY;
+const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
 const ipfsClient = require('ipfs-http-client')
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // leaving out the arguments will default to these values
+const ipfs = ipfsClient({
+  host: "ipfs.infura.io",
+  port: 5001,
+  protocol: "https",
+  apiPath: "/api/v0",
+  headers: {
+    authorization: auth,
+  },
+});
+// leaving out the arguments will default to these values
+// { host: 'localhost', port: 5001, protocol: 'http' } 'ipfs.infura.io' url: "http://127.0.0.1:5001/webui"
 
 class App extends Component {
 
@@ -28,7 +41,9 @@ class App extends Component {
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
-  }
+  };
+
+
 
   async loadBlockchainData() {
     const web3 = window.web3
@@ -49,14 +64,14 @@ class App extends Component {
     if (networkData) {
 
       //Assign DVS_WEB contract to a variable 
-      const dvs_web = new web3.eth.Contract(DVS_WEB.abi, networkData.address)
-      // console.log("->", dvs_web)
+      const dvsweb = new web3.eth.Contract(DVS_WEB.abi, networkData.address)
+      console.log("->", dvsweb)
 
       //Add DVS_WEB to the state
-      this.setState({ dvs_web })
+      this.setState({ dvsweb })
 
       //Check videoAmounts
-      const videosCount = await dvs_web.methods.videoCount().call()
+      const videosCount = await dvsweb.methods.videoCount().call()
 
       //Add videoAmounts to the state
       this.setState({ videosCount })
@@ -64,14 +79,14 @@ class App extends Component {
       //Load Videos
       //Iterate throught videos and add them to the state (sort by newest)
       for (var i = videosCount; i >= 1; i--) {
-        const video = await dvs_web.methods.Videos(i).call()
+        const video = await dvsweb.methods.videos(i).call()
         this.setState({
           videos: [...this.state.videos, video]
         })
       }
 
       //Set latest video and it's title to view as default 
-      const latest = await dvs_web.methods.Videos(videosCount).call()
+      const latest = await dvsweb.methods.videos(videosCount).call()
 
       //Set loading state to false
       this.setState({
@@ -88,6 +103,8 @@ class App extends Component {
     }
 
   }
+
+
 
   //Get video
   captureFile = event => {
@@ -167,3 +184,22 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+// const projectId = '2E8Kps3Xij.................';   //(Step 3. Place the project id from your infura project)
+// const projectSecret = 'b222afc94.....................';  //(Step 4. Place the project_secrect from your infura project)
+
+// const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+
+// const ipfsClient = require('ipfs-http-client')
+// const ipfs = ipfsClient.create({
+//   host: "ipfs.infura.io",
+//    port: 5001,
+//    protocol: "https",
+//    apiPath: "/api/v0",
+//    headers: {
+//        authorization: auth,
+//    },
+//   });

@@ -36,14 +36,12 @@ class Navbar extends Component {
                 <>
                 </>
             }
+            <a className="navbar-brand col-sm-3 col-md-2 mr-0 " href="https://github.com/ShivaKanchi/DVS_WEB" target="_blank" rel="noopener noreferrer" >
+              <i className='fa fa-github' ></i>
+            </a>
           </li>
-
-          <a className="navbar-brand col-sm-3 col-md-2 mr-0 " href="https://github.com/ShivaKanchi/DVS_WEB" target="_blank" rel="noopener noreferrer" >
-            <i class='fa fa-github'></i>
-          </a>
-
         </ul>
-      </nav>
+      </nav >
     );
   }
 }

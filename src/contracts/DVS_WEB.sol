@@ -7,7 +7,7 @@ contract DVS_WEB {
     uint public videoCount = 0;
     string public name = "DVS_WEB";
     //Create id=>struct mapping
-    mapping(uint => Video) public Videos;
+    mapping(uint => Video) public videos;
 
     // 1.Model the video
     //Create Struct(Customized Data Types)
@@ -39,7 +39,7 @@ contract DVS_WEB {
 
         // Add video to the contract
         //msg is a global variable in solidity
-        Videos[videoCount] = Video(videoCount, _videoHash, _title, msg.sender);
+        videos[videoCount] = Video(videoCount, _videoHash, _title, msg.sender);
 
         // Trigger an event(to know when the video is uploaded)
         emit VideoUploaded(videoCount, _videoHash, _title, msg.sender);

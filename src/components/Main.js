@@ -26,7 +26,7 @@ class Main extends Component {
             </>)
               : (
                 <div className='d-flex justify-content-center align-items-center' style={{ height: '649px' }} >
-                  <img src={blockgif} width='160' height='160' />
+                  <img src={blockgif} width='160' height='160' alt='Loading' />
                 </div>
               )
             }
@@ -74,7 +74,7 @@ class Main extends Component {
 
 
             {/* Map Video */}
-            {this.props.videos?.map((video, key) => {
+            {this.props.Videos?.map((video, key) => {
               // {/* Return Video */ }
               return (
                 <div id={key} className='card mb-4 text-center bg-secondary mx-auto' style={{ width: '175px' }}>
